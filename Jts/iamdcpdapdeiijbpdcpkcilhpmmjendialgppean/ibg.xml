@@ -43,7 +43,7 @@
 					<ColumnInfo colId="9" enabled="false" alignment="0" width="120"/>
 					<ColumnInfo colId="13" enabled="false" alignment="0" width="70"/>
 					<ColumnInfo colId="16" enabled="false" alignment="2" width="60"/>
-					<AccountColumnInfo colId="14" enabled="true" alignment="2" width="80"/>
+					<ColumnInfo colId="14" enabled="true" alignment="2" width="80"/>
 					<ColumnInfo colId="12" enabled="true" alignment="0" width="100"/>
 					<ColumnInfo colId="11" enabled="false" alignment="0" width="100"/>
 					<ColumnInfo colId="17" enabled="true" alignment="2" width="60"/>
@@ -135,7 +135,7 @@
 					<ColumnInfo colId="9" enabled="false" alignment="0" width="120"/>
 					<ColumnInfo colId="13" enabled="false" alignment="0" width="70"/>
 					<ColumnInfo colId="16" enabled="false" alignment="2" width="60"/>
-					<AccountColumnInfo colId="14" enabled="true" alignment="2" width="80"/>
+					<ColumnInfo colId="14" enabled="true" alignment="2" width="80"/>
 					<ColumnInfo colId="12" enabled="true" alignment="0" width="100"/>
 					<ColumnInfo colId="11" enabled="false" alignment="0" width="100"/>
 					<ColumnInfo colId="17" enabled="true" alignment="2" width="60"/>
@@ -195,7 +195,7 @@
 					<ColumnInfo colId="9" enabled="false" alignment="0" width="120"/>
 					<ColumnInfo colId="13" enabled="false" alignment="0" width="70"/>
 					<ColumnInfo colId="16" enabled="false" alignment="2" width="60"/>
-					<AccountColumnInfo colId="14" enabled="true" alignment="2" width="80"/>
+					<ColumnInfo colId="14" enabled="true" alignment="2" width="80"/>
 					<ColumnInfo colId="12" enabled="true" alignment="0" width="100"/>
 					<ColumnInfo colId="11" enabled="false" alignment="0" width="100"/>
 					<ColumnInfo colId="17" enabled="true" alignment="2" width="60"/>
@@ -258,12 +258,12 @@
 				<CommissionPolicy>
 					<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 				</CommissionPolicy>
-				<TouchedTrigger val="1.0" allowZero="false"/>
-				<OpenCloseAttrib val="O"/>
 				<OutsideRth val="false"/>
+				<TouchedTrigger val="1.0" allowZero="false"/>
 				<TriggerMethod>
 					<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 				</TriggerMethod>
+				<OpenCloseAttrib val="O"/>
 			</Attributes>
 			<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 			<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -347,12 +347,12 @@
 						<CommissionPolicy>
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
-						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="O"/>
 						<OutsideRth val="false"/>
+						<TouchedTrigger val="1.0" allowZero="false"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="O"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -438,10 +438,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -527,10 +527,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -616,10 +616,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -705,10 +705,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -794,10 +794,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -883,10 +883,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -972,10 +972,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1061,10 +1061,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1136,6 +1136,7 @@
 							<priceTypeExt>None</priceTypeExt>
 						</PriceTypeQuantityUnit>
 					</AttachedOrderData2>
+					<modifiedByUser>NON_EXISTENT</modifiedByUser>
 					<presetVariant>ORDER_PRESET_SEC_TYPE_LEVEL</presetVariant>
 				</OrderDefault>
 				<ListOfOrderDefaultNode varName="children">
@@ -1151,10 +1152,10 @@
 									<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 								</CommissionPolicy>
 								<TouchedTrigger val="1.0" allowZero="false"/>
-								<OpenCloseAttrib val="C"/>
 								<TriggerMethod>
 									<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 								</TriggerMethod>
+								<OpenCloseAttrib val="C"/>
 							</Attributes>
 							<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 							<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1226,6 +1227,7 @@
 									<priceTypeExt>None</priceTypeExt>
 								</PriceTypeQuantityUnit>
 							</AttachedOrderData2>
+							<modifiedByUser>NON_EXISTENT</modifiedByUser>
 							<presetVariant>ORDER_PRESET_SEC_TYPE_LEVEL</presetVariant>
 						</OrderDefault>
 						<ListOfOrderDefaultNode varName="children"/>
@@ -1242,10 +1244,10 @@
 									<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 								</CommissionPolicy>
 								<TouchedTrigger val="1.0" allowZero="false"/>
-								<OpenCloseAttrib val="C"/>
 								<TriggerMethod>
 									<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 								</TriggerMethod>
+								<OpenCloseAttrib val="C"/>
 							</Attributes>
 							<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 							<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1317,6 +1319,7 @@
 									<priceTypeExt>None</priceTypeExt>
 								</PriceTypeQuantityUnit>
 							</AttachedOrderData2>
+							<modifiedByUser>NON_EXISTENT</modifiedByUser>
 							<presetVariant>ORDER_PRESET_SEC_TYPE_LEVEL</presetVariant>
 						</OrderDefault>
 						<ListOfOrderDefaultNode varName="children"/>
@@ -1333,10 +1336,10 @@
 									<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 								</CommissionPolicy>
 								<TouchedTrigger val="1.0" allowZero="false"/>
-								<OpenCloseAttrib val="C"/>
 								<TriggerMethod>
 									<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 								</TriggerMethod>
+								<OpenCloseAttrib val="C"/>
 							</Attributes>
 							<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 							<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1408,6 +1411,7 @@
 									<priceTypeExt>None</priceTypeExt>
 								</PriceTypeQuantityUnit>
 							</AttachedOrderData2>
+							<modifiedByUser>NON_EXISTENT</modifiedByUser>
 							<presetVariant>ORDER_PRESET_SEC_TYPE_LEVEL</presetVariant>
 						</OrderDefault>
 						<ListOfOrderDefaultNode varName="children"/>
@@ -1424,10 +1428,10 @@
 									<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 								</CommissionPolicy>
 								<TouchedTrigger val="1.0" allowZero="false"/>
-								<OpenCloseAttrib val="C"/>
 								<TriggerMethod>
 									<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 								</TriggerMethod>
+								<OpenCloseAttrib val="C"/>
 							</Attributes>
 							<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 							<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1499,6 +1503,7 @@
 									<priceTypeExt>None</priceTypeExt>
 								</PriceTypeQuantityUnit>
 							</AttachedOrderData2>
+							<modifiedByUser>NON_EXISTENT</modifiedByUser>
 							<presetVariant>ORDER_PRESET_SEC_TYPE_LEVEL</presetVariant>
 						</OrderDefault>
 						<ListOfOrderDefaultNode varName="children"/>
@@ -1514,10 +1519,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1603,10 +1608,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1692,10 +1697,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1780,8 +1785,8 @@
 						<CommissionPolicy>
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
-						<MonetaryValue val="3000.0"/>
 						<TouchedTrigger val="1.0" allowZero="false"/>
+						<MonetaryValue val="3000.0"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1867,10 +1872,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -1956,10 +1961,10 @@
 							<TwsEnum type="jfix.FixCommissionPolicy" varName="val" val="0"/>
 						</CommissionPolicy>
 						<TouchedTrigger val="1.0" allowZero="false"/>
-						<OpenCloseAttrib val="C"/>
 						<TriggerMethod>
 							<TwsEnum type="jfix.FixTriggerMethod" varName="val" val="0"/>
 						</TriggerMethod>
+						<OpenCloseAttrib val="C"/>
 					</Attributes>
 					<OCAType varName="ocaType" fixString="ReduceOnFillNonBlock"/>
 					<AlgoExchangeSettings varName="algoExchangeSettings">
@@ -2067,7 +2072,7 @@
 		<TradeBlinkType type="jsetting.ClosedBlinkType" varName="blinkType"/>
 	</IBlinkTypeSettings>
 	<ArClearingPair varName="clearingPairs"/>
-	<UpgradeHistory varName="upgradeHistory" introduceBobLayout="false" introduceExecVolColumn="false" introSuperUserAcctWindow="false" introTraderDashboard="false" introOrderWizard="false" introOrderWizardAutoOrder="false" introLookAndFeel="false" adjustMainWinSizeToPreffered="true" createMainWinUntitledPage="true" addPortfolioPageToMainWin="true" introAccountFundsColumn="false" introNetDividendColumn="false" introMutualFundColumn="false" introMoneyMarketColumn="false" introCorpBondColumn="false" introTBondColumn="false" introTBillColumn="false" introWarrantColumn="false" introIssuerOptionColumn="false" introCommodityColumn="false" introCfdTotalColumn="false" introCfdDailyColumn="false" introPortfolioPendingCashColumn="false" introMarketScanner="false" introSimilarProducts="false" introLoadCompanyResearch="false" introChartMoveData="false" alternatingRowBrightnessSettingMoved="true" languageFontUpdated="false" toolbarLanguageFontUpdated="false" introSavings="false" introExecSoftDollars="false" updateWarnOnExit="true" introPagesSorted="false" introIswTimePanelByVwap="false" introIswTimePanelByAlgo="false" introMidpoint="false" autoEditOnFocus="false" introNamedDefaults="false" uptickBgUpgrated="false" introPrecautionaryConstraints="false" introGtdColumns="false" introOmsCustomerSide="false" introOmsContraSide="false" introPortfolioDrillDownColumn="false" introNewHedging="false" introSlbDashboard="false" introSlbPortfolioExchangeColumn="false" introSlbWindowExchangeColumn="false" introExecSettled="false" introPortfolioLendableColumn="false" introReadOnlyApi="true" lastVersionAnnouncedToApi="0" currentApiAnnouncementVersion="0" introBondSizeIncrement="false" introBondATSDisclosure="false" introBondSizeIncrementApi="false" introBondYtwWarningApi="false" bondSizeIncrementUpgrated="false" destinationTreeIntro="false" introCompanyCalendar="false" introScannerAutoRefresh="false" introCommodityPreset="false" introUI2Menus="true" introSlbColumnOrder="false" introAdBitMask="0" introDynamicScannerLayout="false" introAutoClosePositions="true" allowFrozenMarketData="true" allowIndexFrozenMarketData="false" introClickTraderDeepColumns="false" upgradeContractSingleDescColumn="true" introQuoteMatrix="false" shownTrueTickVolumeWarning="false" introQuoteDetails="false" chameleonFaColumns="false" groupSnappingMigrated="false" workspaceDragged="0" introAnchorWindow="false" revertedAnchorActions="false" introFundamentalSummary="true" introBrokerageIbisToolbarBtn="false" introQuoteDetailColumns="true" introIBISAnnouncement="true" introContractEntryBitMask="0" introIBISToolbarForTAccount="true" economicValueTradeColumns="0" injectedOrderEntryStopColumn="false" introNonIBISMosaicAnnouncement="true" introIBISMosaicAnnouncement="true" introTimeAndSalesTooltip="false" introTimeAndSalesConditionsTooltip="false" introAutoShowLadder="false" introWindowsGroupMove="true" introBondNetPricing="true" introNetPrice="false" introNetPriceApi="false" introNetPriceColumn="false" introFinancialSummary="false" introDailyLineupAutoStart="false" introIndicativeDataChart="false" introScannerColumnsSelection="false" introBlotterNotes="false" containerOverlayMessageShown="false" containerResnapped="false" containerIntroduced="false" introAttachedOrdersScrolling="false" homeExchangeGroupResolved="true" introCalledBondInApi="false" sameActionPairTradeInApi="false" chartFontMigrated="false" dontShowPDFIntro="false" introIntreasePrecision="false" derivativesColumnDisplaySet="false" probabilityLabIntroduced="false" volLabIntroduced="false" simplifiedActionsSet="false" crossChainUsed="false" mainwinTabsAdded="false" workspacesDisabled="false" workspaceDefaultInitDone="false" introHighPrecisionFXQuotes="false" introMainWinTabs="false" introMutualFundComparison="false" mainwinTabsTabAdded="false" introQuoteDetEsgColumn="false" introQuoteDetPerformanceColumn="false" introQuoteDetFundDetailsColum="false" introQuoteDetExchColum="false" colorMarketablePriceAreas="false" introGroupLegsIntoComboPositions="false" introAOTTab="false" injectedArrivalPriceColumn="false" introducedFrozenColumnsPortfolio="false" injectedYieldColumnsInOrderConfirm="false" introducedComparableBid="false" introducedComparableAsk="false" upgradeComparableBid="false" upgradeComparableAsk="false" introSeparateStudiesBarData="false" portfolioPerformanceIntroduced="false" complexPositionIntroduced="false" predefinedWatchlistIntroduced="false" backtestingIntroduced="false" whiteMosaicIntroduced="false" hideComplexPositionsForFAAdvisors="false" groupComplexPositionsForFa="false" showHighPrecisionForexDataSet="true" introDefaultSimulatedTradingPortNumber="true" introduce1to1Price="false" orderTicketFontSet="false" mainToolbarFontSet="false" fontCheckOnStartupDone="false" introTimeAndSalesInShares="false" introBenchmarker="false" introStockTwits="false" introPbi="false" introFyi="false" toastTickerInNewsLoadedIntoWinGroup="false" introFxPortfolioCheatSheet="false" introAdvancedScannerCheatSheet="false" introBondScannerCheatSheet="false" introUseTopDataVolUpdates="false" introBBTV="false" introDefaultBrowser="false" introNLVUncertainty="false" introPendingChargesColumn="false" introPendingChargesRow="false" introCustomBrowser="false" introSentimConfidColumns="false" botDemoShown="false" pnlRollingIntroduced="false" introNewOptionChainLayout="false" introBankSweepAccountColumn="false" introBankSweepAccountWarning="false" introMktDataSnapshotColumns="false" introAuctionWatchList="false" introRoutedAsPercent="false" introFeedback="false" introLiveTV="false" introAccruedIntrestRow="false" introAccruedIntrestColumn="false" introSMADeficitInLikeOwned="false" introMarginDeficitInLikeOwned="false" introAvailableFundsLessLikeOwned="false" introRelativePriceWand="false" introPostItNote="false" introPredefinedStratBuilder="false" introSMAReducedByLikeOwned="false" introUseKeyboardForFieldEntry="false" introOrderAcceptTimeColumn="false" introAllowQuantityEditing="true" selfImposedColsAdded="false" introOptionGrid="false" introSpxGreeks="false" introBondDeskDealerColumn="false" introBondDeskDealerClearingColumn="false" blotterQdTurnedOff="false" introAdvancedQuoteDetailsIcon="false" introAdvancedQuoteDetailsIconRuns="4" introBondScanResultsChart="true" introKeyClickConfig="false" introManualOrderTimeIntroMessage="false" checkResetAccountsOnRestart="true" new882User="true" new885User="true" new886User="true" new890User="true" new891User="true" new892User="true" new894User="true" new899User="true" new901User="true" new903User="true" new910User="true" new911User="true" new914User="true" new918User="true" new923User="true" new933User="true" new941User="true" new942User="true" new944User="true" new945User="true" new947User="true" new950User="true" new954User="true" new955User="true" new957User="true" new959User="true" new960User="true" new964User="true" new965User="true" new967User="true" new968User="true" new969User="true" new973User="true" new974User="true" new975User="true">
+	<UpgradeHistory varName="upgradeHistory" introduceBobLayout="false" introduceExecVolColumn="false" introSuperUserAcctWindow="false" introTraderDashboard="false" introOrderWizard="false" introOrderWizardAutoOrder="false" introLookAndFeel="false" adjustMainWinSizeToPreffered="true" createMainWinUntitledPage="true" addPortfolioPageToMainWin="true" introAccountFundsColumn="false" introNetDividendColumn="false" introMutualFundColumn="false" introMoneyMarketColumn="false" introCorpBondColumn="false" introTBondColumn="false" introTBillColumn="false" introWarrantColumn="false" introIssuerOptionColumn="false" introCommodityColumn="false" introCfdTotalColumn="false" introCfdDailyColumn="false" introPortfolioPendingCashColumn="false" introMarketScanner="false" introSimilarProducts="false" introLoadCompanyResearch="false" introChartMoveData="false" alternatingRowBrightnessSettingMoved="true" languageFontUpdated="false" toolbarLanguageFontUpdated="false" introSavings="false" introExecSoftDollars="false" updateWarnOnExit="true" introPagesSorted="false" introIswTimePanelByVwap="false" introIswTimePanelByAlgo="false" introMidpoint="false" autoEditOnFocus="false" introNamedDefaults="false" uptickBgUpgrated="false" introPrecautionaryConstraints="false" introGtdColumns="false" introOmsCustomerSide="false" introOmsContraSide="false" introPortfolioDrillDownColumn="false" introNewHedging="false" introSlbDashboard="false" introSlbPortfolioExchangeColumn="false" introSlbWindowExchangeColumn="false" introExecSettled="false" introPortfolioLendableColumn="false" introReadOnlyApi="true" lastVersionAnnouncedToApi="0" currentApiAnnouncementVersion="0" introBondSizeIncrement="false" introBondATSDisclosure="false" introBondSizeIncrementApi="false" introBondYtwWarningApi="false" bondSizeIncrementUpgrated="false" destinationTreeIntro="false" introCompanyCalendar="false" introScannerAutoRefresh="false" introCommodityPreset="false" introUI2Menus="true" introSlbColumnOrder="false" introAdBitMask="0" introDynamicScannerLayout="false" introAutoClosePositions="true" allowFrozenMarketData="true" allowIndexFrozenMarketData="false" introClickTraderDeepColumns="false" upgradeContractSingleDescColumn="true" introQuoteMatrix="false" shownTrueTickVolumeWarning="false" introQuoteDetails="false" chameleonFaColumns="false" groupSnappingMigrated="false" workspaceDragged="0" introAnchorWindow="false" revertedAnchorActions="false" introFundamentalSummary="true" introBrokerageIbisToolbarBtn="false" introQuoteDetailColumns="true" introIBISAnnouncement="true" introContractEntryBitMask="0" introIBISToolbarForTAccount="true" economicValueTradeColumns="0" injectedOrderEntryStopColumn="false" introNonIBISMosaicAnnouncement="true" introIBISMosaicAnnouncement="true" introTimeAndSalesTooltip="false" introTimeAndSalesConditionsTooltip="false" introAutoShowLadder="false" introWindowsGroupMove="true" introBondNetPricing="true" introNetPrice="false" introNetPriceApi="false" introNetPriceColumn="false" introFinancialSummary="false" introDailyLineupAutoStart="false" introIndicativeDataChart="false" introScannerColumnsSelection="false" introBlotterNotes="false" containerOverlayMessageShown="false" containerResnapped="false" containerIntroduced="false" introAttachedOrdersScrolling="false" homeExchangeGroupResolved="true" introCalledBondInApi="false" sameActionPairTradeInApi="false" chartFontMigrated="false" dontShowPDFIntro="false" introIntreasePrecision="false" derivativesColumnDisplaySet="false" probabilityLabIntroduced="false" volLabIntroduced="false" simplifiedActionsSet="false" crossChainUsed="false" mainwinTabsAdded="false" workspacesDisabled="false" workspaceDefaultInitDone="false" introHighPrecisionFXQuotes="false" introMainWinTabs="false" introMutualFundComparison="false" mainwinTabsTabAdded="false" introQuoteDetEsgColumn="false" introQuoteDetPerformanceColumn="false" introQuoteDetFundDetailsColum="false" introQuoteDetExchColum="false" colorMarketablePriceAreas="false" introGroupLegsIntoComboPositions="false" introAOTTab="false" injectedArrivalPriceColumn="false" introducedFrozenColumnsPortfolio="false" injectedYieldColumnsInOrderConfirm="false" introducedComparableBid="false" introducedComparableAsk="false" upgradeComparableBid="false" upgradeComparableAsk="false" introSeparateStudiesBarData="false" portfolioPerformanceIntroduced="false" complexPositionIntroduced="false" predefinedWatchlistIntroduced="false" backtestingIntroduced="false" whiteMosaicIntroduced="false" hideComplexPositionsForFAAdvisors="false" groupComplexPositionsForFa="false" showHighPrecisionForexDataSet="true" introDefaultSimulatedTradingPortNumber="true" introduce1to1Price="false" orderTicketFontSet="false" mainToolbarFontSet="false" fontCheckOnStartupDone="false" introTimeAndSalesInShares="false" introBenchmarker="false" introStockTwits="false" introPbi="false" introFyi="false" toastTickerInNewsLoadedIntoWinGroup="false" introFxPortfolioCheatSheet="false" introAdvancedScannerCheatSheet="false" introBondScannerCheatSheet="false" introUseTopDataVolUpdates="false" introBBTV="false" introDefaultBrowser="false" introNLVUncertainty="false" introPendingChargesColumn="false" introPendingChargesRow="false" introCustomBrowser="false" introSentimConfidColumns="false" botDemoShown="false" pnlRollingIntroduced="false" introNewOptionChainLayout="false" introBankSweepAccountColumn="false" introBankSweepAccountWarning="false" introMktDataSnapshotColumns="false" introAuctionWatchList="false" introRoutedAsPercent="false" introFeedback="false" introLiveTV="false" introAccruedIntrestRow="false" introAccruedIntrestColumn="false" introSMADeficitInLikeOwned="false" introMarginDeficitInLikeOwned="false" introAvailableFundsLessLikeOwned="false" introRelativePriceWand="false" introPostItNote="false" introPredefinedStratBuilder="false" introSMAReducedByLikeOwned="false" introUseKeyboardForFieldEntry="false" introOrderAcceptTimeColumn="false" introAllowQuantityEditing="true" selfImposedColsAdded="false" introOptionGrid="false" introSpxGreeks="false" introBondDeskDealerColumn="false" introBondDeskDealerClearingColumn="false" blotterQdTurnedOff="false" introAdvancedQuoteDetailsIcon="false" introAdvancedQuoteDetailsIconRuns="5" introBondScanResultsChart="true" introKeyClickConfig="false" introManualOrderTimeIntroMessage="false" checkResetAccountsOnRestart="true" new882User="true" new885User="true" new886User="true" new890User="true" new891User="true" new892User="true" new894User="true" new899User="true" new901User="true" new903User="true" new910User="true" new911User="true" new914User="true" new918User="true" new923User="true" new933User="true" new941User="true" new942User="true" new944User="true" new945User="true" new947User="true" new950User="true" new954User="true" new955User="true" new957User="true" new959User="true" new960User="true" new964User="true" new965User="true" new967User="true" new968User="true" new969User="true" new973User="true" new974User="true" new975User="true">
 		<ArString varName="introVolatilityModes"/>
 		<ArString varName="introColumnRules"/>
 	</UpgradeHistory>
