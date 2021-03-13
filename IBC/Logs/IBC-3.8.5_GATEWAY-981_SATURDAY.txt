@@ -1,0 +1,528 @@
+
+================================================================================
+================================================================================
+
+This log file is located at:
+
+    C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\\Logs\IBC-3.8.5_GATEWAY-981_SATURDAY.txt
+
+
+================================================================================
+
+Starting IBC version 3.8.5 on Sat 03/13/2021 at 11:31:15.46
+
+Operating system:  Microsoft Windows 10 Pro  64-bit          10.0.19042  
+
+Arguments:
+
+TWS version = 981
+Entry point = ibcalpha.ibc.IbcGateway
+/TwsPath = ..\\Jts
+/TwsSettingsPath = 
+/IbcPath = C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\
+/Config = C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\config.ini
+/Mode = paper
+/JavaPath = 
+/User =
+/PW =
+/FIXUser =
+/FIXPW =
+
+=================================
+
+Generating the classpath
+Classpath=..\\Jts\ibgateway\981\jars\jts4launch-981.jar;..\\Jts\ibgateway\981\jars\jxbrowser-7.10.jar;..\\Jts\ibgateway\981\jars\jxbrowser-swing-7.10.jar;..\\Jts\ibgateway\981\jars\jxbrowser-win64-7.10.jar;..\\Jts\ibgateway\981\jars\locales.jar;..\\Jts\ibgateway\981\jars\log4j-api-2.12.0.jar;..\\Jts\ibgateway\981\jars\log4j-core-2.12.0.jar;..\\Jts\ibgateway\981\jars\total-2020.jar;..\\Jts\ibgateway\981\jars\twslaunch-981.jar;..\\Jts\ibgateway\981\jars\twslaunch-install4j-1.10.jar;C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\\IBC.jar
+
+Generating the JAVA VM options
+Java VM Options= -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=43e6226a-670d-4640-bcbe-7431da259980 -DvmOptionsPath=C:\Jts\ibgateway\981\ibgateway.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true -Xmx768m
+
+Determining the location of java.exe 
+Location of java.exe=c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+
+Starting IBC with this command:
+"c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\bin\java.exe" -cp  "..\\Jts\ibgateway\981\jars\jts4launch-981.jar;..\\Jts\ibgateway\981\jars\jxbrowser-7.10.jar;..\\Jts\ibgateway\981\jars\jxbrowser-swing-7.10.jar;..\\Jts\ibgateway\981\jars\jxbrowser-win64-7.10.jar;..\\Jts\ibgateway\981\jars\locales.jar;..\\Jts\ibgateway\981\jars\log4j-api-2.12.0.jar;..\\Jts\ibgateway\981\jars\log4j-core-2.12.0.jar;..\\Jts\ibgateway\981\jars\total-2020.jar;..\\Jts\ibgateway\981\jars\twslaunch-981.jar;..\\Jts\ibgateway\981\jars\twslaunch-install4j-1.10.jar;C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\\IBC.jar"  -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=43e6226a-670d-4640-bcbe-7431da259980 -DvmOptionsPath=C:\Jts\ibgateway\981\ibgateway.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true -Xmx768m ibcalpha.ibc.IbcGateway "C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\config.ini"  paper
+
+IBC Settings:
+    AcceptIncomingConnectionAction=manual
+    AcceptNonBrokerageAccountWarning=yes
+    AllowBlindTrading=no
+    BindAddress=
+    ClosedownAt=
+    CommandPrompt=
+    ControlFrom=
+    DismissNSEComplianceNotice=yes
+    DismissPasswordExpiryWarning=no
+    ExistingSessionDetectedAction=manual
+    ExitAfterSecondFactorAuthenticationTimeout=no
+    FIX=no
+    FIXLoginId=***
+    FIXPassword=***
+    IbAutoClosedown=yes
+    IbDir=..\Jts
+    IbLoginId=***
+    IbPassword=***
+    LogComponents=true
+    LoginDialogDisplayTimeout=60
+    MinimizeMainWindow=no
+    OverrideTwsApiPort=
+    ReadOnlyApi=
+    ReadOnlyLogin=no
+    SaveTwsSettingsAt=
+    SecondFactorAuthenticationExitInterval=
+    ShowAllTrades=no
+    StoreSettingsOnServer=yes
+    SuppressInfoMessages=yes
+    TradingMode=paper
+End IBC Settings
+
+2021-03-13 11:31:15:851 IBC: Version: 3.8.5
+System Properties
+------------------------------------------------------------
+swing.boldMetal = false
+java.runtime.name = Java(TM) SE Runtime Environment
+sun.boot.library.path = c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+java.vm.version = 25.152-b16
+sun.awt.nopixfmt = true
+vmOptionsPath = C:\Jts\ibgateway\981\ibgateway.vmoptions
+java.vm.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+path.separator = ;
+java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg = sun.io
+user.country = US
+user.script = 
+sun.java.launcher = SUN_STANDARD
+sun.os.patch.level = 
+java.vm.specification.name = Java Virtual Machine Specification
+user.dir = C:\Users\Ricardo\Desktop\code\python\whipsaw\Jts
+java.runtime.version = 1.8.0_152-b16
+java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs = c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\endorsed
+os.arch = amd64
+java.io.tmpdir = C:\Users\Ricardo\AppData\Local\Temp\
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+user.variant = 
+os.name = Windows 10
+sun.java2d.noddraw = true
+sun.jnu.encoding = Cp1252
+java.library.path = c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\Ricardo\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Calibre2\;C:\Users\Ricardo\Desktop\code\cpp\cpplibs\SDL2-2.0.14\lib\x64;C:\Users\Ricardo\Desktop\code\cpp\cpplibs\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\lib\x64;C:\Program Files\dotnet\;C:\Users\Ricardo\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\Ricardo\AppData\Local\Microsoft\WindowsApps;C:\Users\Ricardo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CMake\bin;C:\Users\Ricardo\.dotnet\tools;;.
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 10.0
+user.home = C:\Users\Ricardo
+user.timezone = Asia/Irkutsk
+installer.uuid = 43e6226a-670d-4640-bcbe-7431da259980
+java.awt.printerjob = sun.awt.windows.WPrinterJob
+file.encoding = Cp1252
+java.specification.version = 1.8
+java.class.path = ..\\Jts\ibgateway\981\jars\jts4launch-981.jar;..\\Jts\ibgateway\981\jars\jxbrowser-7.10.jar;..\\Jts\ibgateway\981\jars\jxbrowser-swing-7.10.jar;..\\Jts\ibgateway\981\jars\jxbrowser-win64-7.10.jar;..\\Jts\ibgateway\981\jars\locales.jar;..\\Jts\ibgateway\981\jars\log4j-api-2.12.0.jar;..\\Jts\ibgateway\981\jars\log4j-core-2.12.0.jar;..\\Jts\ibgateway\981\jars\total-2020.jar;..\\Jts\ibgateway\981\jars\twslaunch-981.jar;..\\Jts\ibgateway\981\jars\twslaunch-install4j-1.10.jar;C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\\IBC.jar
+user.name = Ricardo
+java.vm.specification.version = 1.8
+sun.java.command = ibcalpha.ibc.IbcGateway C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\config.ini paper
+java.home = c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64
+sun.arch.data.model = 64
+user.language = en
+java.specification.vendor = Oracle Corporation
+awt.toolkit = sun.awt.windows.WToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_152
+java.ext.dirs = c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\ext;C:\Windows\Sun\Java\lib\ext
+sun.boot.class.path = c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\resources.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\rt.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\sunrsasign.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jsse.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jce.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\charsets.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jfr.jar;c:\users\ricardo\.i4j_jres\1.8.0_152-tzdata2019c_64\classes
+java.vendor = Oracle Corporation
+file.separator = \
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeLittle
+sun.cpu.endian = little
+sun.desktop = windows
+sun.locale.formatasdefault = true
+sun.cpu.isalist = amd64
+------------------------------------------------------------
+2021-03-13 11:31:15:852 IBC: Using default settings provider: ini file is C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\config.ini
+2021-03-13 11:31:15:852 IBC: Using default login manager: getting username and password from args but not found. Will get from settings
+2021-03-13 11:31:15:852 IBC: Using default main window manager: constructor parameter isGateway=true
+2021-03-13 11:31:15:852 IBC: Using default trading mode manager: constructor parameter args: tradingMode=paper
+2021-03-13 11:31:15:853 IBC: Using default config dialog manager
+2021-03-13 11:31:15:857 IBC: CommandServer is not started because the port is not configured
+2021-03-13 11:31:15:926 IBC: TWS Settings directory is: ..\Jts
+2021-03-13 11:31:15:930 IBC: Ensuring ..\Jts\jts.ini contains required minimal lines
+2021-03-13 11:31:15:930 IBC: Found setting: [Logon]/s3store=true
+2021-03-13 11:31:15:930 IBC: Found setting: [Logon]/Locale=en
+2021-03-13 11:31:15:930 IBC: Found setting: [Logon]/displayedproxymsg=1
+2021-03-13 11:31:15:930 IBC: Found setting: [IBGateway]/ApiOnly=true
+2021-03-13 11:31:15:930 IBC: Confirmed ..\Jts\jts.ini contains required minimal lines
+2021-03-13 11:31:15:930 IBC: Starting session: will exit if login dialog is not displayed within 30 seconds
+2021-03-13 11:31:17:802 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2021-03-13 11:31:17:803 IBC: Setting Trading mode = paper
+2021-03-13 11:31:17:895 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2021-03-13 11:31:17:895 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Opened
+
+null(javax.swing.JRootPane){Object.Component.Container.JComponent.JRootPane}
+|   null.glassPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   null.layeredPane(javax.swing.JLayeredPane){Object.Component.Container.JComponent.JLayeredPane}
+|   |   null(jtscomponents.plaf.dZ){Object.Component.Container.JComponent.JPanel.dZ}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(javax.swing.JLabel){JLabel: Interactive Brokers Gateway}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(jtscomponents.plaf.dE){JButton: }
+|   |   |   null(jtscomponents.plaf.dX){Object.Component.Container.JComponent.JPanel.dX}
+|   |   |   Close(jtscomponents.plaf.ds){JButton: }
+|   |   |   Maximize(jtscomponents.plaf.dt){JButton: }
+|   |   |   Minimize(jtscomponents.plaf.ds){JButton: }
+|   |   null(ibgateway.aI){Object.Component.Container.JComponent.JPanel.bx.aI}
+|   |   |   null(ibgateway.aG){Object.Component.Container.JComponent.JPanel.bs.aG}
+|   |   |   |   null(twslaunch.jclient.bu){Object.Component.Container.JComponent.JPanel.bu}
+|   |   |   |   |   null(javax.swing.JButton){JButton: English}
+|   |   |   |   |   null(javax.swing.JLabel){JLabel: null}
+|   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   null(twslaunch.gstat.j){Object.Component.Container.JComponent.JPanel.j}
+|   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: API Type}
+|   |   |   |   |   |   null(ibgateway.aJ){Object.Component.Container.JComponent.JPanel.P.aJ}
+|   |   |   |   |   |   |   null(twslaunch.jtscomponents.T){JToggleButton: FIX CTCI}
+|   |   |   |   |   |   |   null(twslaunch.jtscomponents.T){JToggleButton: IB API}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Trading Mode}
+|   |   |   |   |   |   null(twslaunch.jclient.bA){Object.Component.Container.JComponent.JPanel.P.bA}
+|   |   |   |   |   |   |   null(twslaunch.jtscomponents.T){JToggleButton: Live Trading}
+|   |   |   |   |   |   |   null(twslaunch.jtscomponents.T){JToggleButton: Paper Trading}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(twslaunch.jclient.bz){Object.Component.Container.JComponent.JPanel.bz}
+|   |   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: SIMULATED TRADING}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: null}
+|   |   |   |   |   |   |   |   null(twslaunch.trader.common.document.u){JTextField: rj4m35ste}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: null}
+|   |   |   |   |   |   |   |   null(twslaunch.trader.common.document.r){JPasswordField: ***}
+|   |   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: null}
+|   |   |   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: SSL}
+|   |   |   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JButton){JButton: Paper Log In}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   null(twslaunch.jclient.by){Object.Component.Container.JComponent.JPanel.by}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 1}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 2}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 3}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 4}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 5}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 6}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 7}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 8}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 9}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: 0}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: q}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: w}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: e}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: r}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: t}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: y}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: u}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: i}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: o}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: p}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: a}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: s}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: d}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: f}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: g}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: h}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: j}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: k}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: l}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bp){JLabel: }
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: z}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: x}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: c}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: v}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: b}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: n}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: m}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: ,}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: .}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bp){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: !}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: @}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: #}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: $}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: %}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: ^}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: &}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: *}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: (}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: )}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: {}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: }}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: [}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: ]}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: '}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: \}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: |}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: <}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: >}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: ?}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: +}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: -}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: =}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: _}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: :}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: ;}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: "}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: /}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bo){JLabel: ~}
+|   |   |   |   |   |   |   |   null(twslaunch.jclient.bp){JLabel: }
+|   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JButton){JButton: More Options}
+|   |   |   |   |   null(javax.swing.JButton){JButton: }
+|   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   null(javax.swing.JScrollPane){Object.Component.Container.JComponent.JScrollPane}
+|   |   |   |   null(javax.swing.JViewport){Object.Component.Container.JComponent.JViewport}
+|   |   |   |   |   null(ibgateway.aH){Object.Component.Container.JComponent.JPanel.bw.aH}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Color Theme}
+|   |   |   |   |   |   null(javax.swing.JComboBox){JComboBox: dark}
+|   |   |   |   |   |   |   null(javax.swing.plaf.metal.MetalComboBoxButton){JButton: }
+|   |   |   |   |   |   |   null(javax.swing.CellRendererPane){Object.Component.Container.CellRendererPane}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Select language}
+|   |   |   |   |   |   null(javax.swing.JComboBox){JComboBox: English}
+|   |   |   |   |   |   |   null(javax.swing.plaf.metal.MetalComboBoxButton){JButton: }
+|   |   |   |   |   |   |   null(javax.swing.CellRendererPane){Object.Component.Container.CellRendererPane}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Region}
+|   |   |   |   |   |   null(javax.swing.JComboBox){JComboBox: Custom}
+|   |   |   |   |   |   |   null(javax.swing.plaf.metal.MetalComboBoxButton){JButton: }
+|   |   |   |   |   |   |   null(javax.swing.CellRendererPane){Object.Component.Container.CellRendererPane}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Time Zone}
+|   |   |   |   |   |   null(javax.swing.JComboBox){JComboBox: (UTC+08:00) Asia/Irkutsk}
+|   |   |   |   |   |   |   null(javax.swing.plaf.metal.MetalComboBoxButton){JButton: }
+|   |   |   |   |   |   |   null(javax.swing.CellRendererPane){Object.Component.Container.CellRendererPane}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Settings directory}
+|   |   |   |   |   |   null(javax.swing.JTextField){JTextField: C:\Users\Ricardo\Desktop\code\python\whipsaw\Jts\..\Jts}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Host}
+|   |   |   |   |   |   null(javax.swing.JTextField){JTextField: }
+|   |   |   |   |   |   null(javax.swing.JButton){JButton: Lookup}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Port}
+|   |   |   |   |   |   null(twslaunch.trader.common.document.u){JTextField: }
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel:     Browser Path}
+|   |   |   |   |   |   null(javax.swing.JTextField){JTextField: }
+|   |   |   |   |   |   null(javax.swing.JButton){JButton: Locate}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JCheckBox){JCheckBox: Use SSL(unselected)}
+|   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   |   null(twslaunch.jtscomponents.N){JLabel: null}
+|   |   |   |   |   |   null(javax.swing.JCheckBox){JCheckBox: Verbose logging(unselected)}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JCheckBox){JCheckBox: No internet connectivity(unselected)}
+|   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   |   null(twslaunch.jtscomponents.N){JLabel: null}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JCheckBox){JCheckBox: Connect through private WAN(unselected)}
+|   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Select designated server}
+|   |   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   |   |   null(javax.swing.JComboBox){[Disabled]JComboBox: New York}
+|   |   |   |   |   |   |   |   |   null(javax.swing.plaf.metal.MetalComboBoxButton){[Disabled]JButton: }
+|   |   |   |   |   |   |   |   |   null(javax.swing.CellRendererPane){Object.Component.Container.CellRendererPane}
+|   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   null(javax.swing.JScrollPane$ScrollBar){Object.Component.Container.JComponent.JScrollBar.ScrollBar}
+|   |   |   |   |   null(jtscomponents.plaf.dJ){JButton: }
+|   |   |   |   |   null(jtscomponents.plaf.dI){JButton: }
+|   |   |   |   null(javax.swing.JScrollPane$ScrollBar){Object.Component.Container.JComponent.JScrollBar.ScrollBar}
+|   |   |   |   |   null(jtscomponents.plaf.dJ){JButton: }
+|   |   |   |   |   null(jtscomponents.plaf.dI){JButton: }
+|   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+
+
+2021-03-13 11:31:17:910 IBC: Click button: Paper Log In
+2021-03-13 11:31:18:383 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2021-03-13 11:31:18:386 IBC: Detected frame entitled: Loading...; event=Activated
+2021-03-13 11:31:18:387 IBC: Detected frame entitled: Loading...; event=Focused
+2021-03-13 11:31:18:387 IBC: Detected frame entitled: Loading...; event=Opened
+
+null(javax.swing.JRootPane){Object.Component.Container.JComponent.JRootPane}
+|   null.glassPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   null.layeredPane(javax.swing.JLayeredPane){Object.Component.Container.JComponent.JLayeredPane}
+|   |   null.contentPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   null(ibgateway.aF){Object.Component.Container.JComponent.JPanel.aF}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Purpose}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Status}
+|   |   |   |   |   null(ibgateway.aE){Object.Component.Container.JComponent.JPanel.aE}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: API Server}
+|   |   |   |   |   |   null(feature.farm.w){Object.Component.Container.JComponent.JPanel.w}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: disconnected}
+|   |   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   |   null(jclient.qr){Object.Component.Container.JComponent.qr}
+|   |   |   |   null(ibgateway.aD){Object.Component.Container.JComponent.JPanel.aD}
+|   |   |   |   |   null(ibgateway.aC){Object.Component.Container.JComponent.JPanel.aC}
+|   |   |   |   |   |   null(trader.common.tag.m){[Disabled]JCheckBox: Show log(unselected)}
+|   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   null(trader.common.tag.m){[Disabled]JCheckBox: Show API messages(unselected)}
+|   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   |   null(jutils.eb){Object.Component.Container.JComponent.JTextComponent.JEditorPane.JTextPane.eb}
+|   |   |   |   |   |   null(jutils.eb){Object.Component.Container.JComponent.JTextComponent.JEditorPane.JTextPane.eb}
+|   |   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JTabbedPane){Object.Component.Container.JComponent.JTabbedPane}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(trader.common.tag.l){JButton: Clear}
+|   |   null(jtscomponents.plaf.dZ){Object.Component.Container.JComponent.JPanel.dZ}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(javax.swing.JLabel){JLabel: LOADING...}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(jtscomponents.plaf.dE){JButton: }
+|   |   |   null(jtscomponents.plaf.dX){Object.Component.Container.JComponent.JPanel.dX}
+|   |   |   Close(jtscomponents.plaf.ds){JButton: }
+|   |   |   Maximize(jtscomponents.plaf.dt){JButton: }
+|   |   |   Minimize(jtscomponents.plaf.ds){JButton: }
+|   |   |   null(jtscomponents.iw){JMenuBar: null}
+|   |   |   |   File
+|   |   |   |   |   Gateway Logs
+|   |   |   |   |   API Logs
+|   |   |   |   |   Close
+|   |   |   |   Configure
+|   |   |   |   |   Settings[Disabled]
+|   |   |   |   |   Automatic Encryption
+|   |   |   |   Help
+|   |   |   |   |   About Gateway
+
+
+2021-03-13 11:31:18:388 IBC: Found Gateway main window
+2021-03-13 11:31:18:953 IBC: Detected frame entitled: Loading...; event=Lost focus
+2021-03-13 11:31:18:954 IBC: Detected frame entitled: Authenticating...; event=Activated
+2021-03-13 11:31:18:954 IBC: Detected frame entitled: Authenticating...; event=Focused
+2021-03-13 11:31:18:954 IBC: Detected frame entitled: Authenticating...; event=Opened
+
+null(twslaunch.feature.welcome.I){Object.Component.Container.JComponent.JRootPane.I}
+|   null.glassPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   null.layeredPane(javax.swing.JLayeredPane){Object.Component.Container.JComponent.JLayeredPane}
+|   |   null.contentPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   null(javax.swing.Box){Object.Component.Container.JComponent.Box}
+|   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   null(twslaunch.feature.welcome.G){JButton: null}
+|   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   |   null(twslaunch.feature.welcome.G){JButton: null}
+|   |   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JProgressBar){Object.Component.Container.JComponent.JProgressBar}
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Build 981.2u}
+|   |   |   |   |   |   |   null(javax.swing.JLabel){JLabel: Authenticating...}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel:  }
+|   |   |   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   |   |   null(javax.swing.JTextPane){Object.Component.Container.JComponent.JTextComponent.JEditorPane.JTextPane}
+|   |   |   |   |   |   null(javax.swing.JLabel){JLabel: No Internet connection.}
+
+
+LogModuleConfigurator-Init: Log4j Ver2.x found on classpath
+LogModuleConfigurator-Init: LogModuleConfigurator initialized with Log4j Verd.x
+2021-03-13 11:31:21:379 IBC: Detected frame entitled: Initializing environment...; event=Lost focus
+2021-03-13 11:31:21:384 IBC: Detected frame entitled: Initializing environment...; event=Focused
+2021-03-13 11:31:21:384 IBC: Detected frame entitled: Initializing environment...; event=Lost focus
+2021-03-13 11:31:21:385 IBC: Detected frame entitled: IB Gateway; event=Activated
+2021-03-13 11:31:21:385 IBC: Detected frame entitled: IB Gateway; event=Focused
+2021-03-13 11:31:21:386 IBC: Detected frame entitled: IB Gateway; event=Closing
+2021-03-13 11:31:21:579 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2021-03-13 11:31:21:619 IBC: Detected frame entitled: Starting application...; event=Closed
+2021-03-13 11:31:21:619 IBC: Login has completed
+2021-03-13 11:31:21:620 IBC: Detected dialog entitled: Warning; event=Activated
+2021-03-13 11:31:21:621 IBC: Detected dialog entitled: Warning; event=Focused
+2021-03-13 11:31:21:624 IBC: Detected dialog entitled: Warning; event=Opened
+
+null(javax.swing.JRootPane){Object.Component.Container.JComponent.JRootPane}
+|   null.glassPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   null.layeredPane(javax.swing.JLayeredPane){Object.Component.Container.JComponent.JLayeredPane}
+|   |   null.contentPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   null(javax.swing.JLabel){JLabel: null}
+|   |   |   |   null(javax.swing.JLabel){JLabel: <html>This is not a brokerage account. <br>This is a "paper" trading account in which you <br>can engage in simulated trading. <br><br>Please confirm that you understand and wish <br>to conduct simulated trading before proceeding.</html>}
+|   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   null(trader.common.tag.l){JButton: I understand and accept}
+|   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   null(jtscomponents.plaf.d1){Object.Component.Container.JComponent.JPanel.d1}
+|   |   null(jtscomponents.plaf.dZ){Object.Component.Container.JComponent.JPanel.dZ}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(javax.swing.JLabel){JLabel: Warning}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(jtscomponents.plaf.dE){JButton: }
+|   |   |   null(jtscomponents.plaf.dX){Object.Component.Container.JComponent.JPanel.dX}
+|   |   |   Close(jtscomponents.plaf.ds){[Disabled]JButton: }
+|   |   |   Maximize(jtscomponents.plaf.dt){JButton: }
+|   |   |   Minimize(jtscomponents.plaf.ds){[Disabled]JButton: }
+
+
+2021-03-13 11:31:21:624 IBC: Click button: I understand and accept
+2021-03-13 11:31:21:696 IBC: Detected dialog entitled: Warning; event=Lost focus
+2021-03-13 11:31:21:697 IBC: Detected dialog entitled: Shutdown progress; event=Activated
+2021-03-13 11:31:21:697 IBC: Detected dialog entitled: Shutdown progress; event=Focused
+2021-03-13 11:31:21:698 IBC: Detected dialog entitled: Shutdown progress; event=Opened
+
+null(javax.swing.JRootPane){Object.Component.Container.JComponent.JRootPane}
+|   null.glassPane(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   null.layeredPane(javax.swing.JLayeredPane){Object.Component.Container.JComponent.JLayeredPane}
+|   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   null(javax.swing.JProgressBar){Object.Component.Container.JComponent.JProgressBar}
+|   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   |   null(javax.swing.JLabel){JLabel: Preparing to shutdown IA...}
+|   |   |   |   null(javax.swing.Box$Filler){Object.Component.Container.JComponent.Filler}
+|   |   |   |   null(trader.common.tag.l){[Disabled]JButton: Cancel}
+|   |   null(javax.swing.JPanel){Object.Component.Container.JComponent.JPanel}
+|   |   |   null(jtscomponents.plaf.d1){Object.Component.Container.JComponent.JPanel.d1}
+|   |   null(jtscomponents.plaf.dZ){Object.Component.Container.JComponent.JPanel.dZ}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(javax.swing.JLabel){JLabel: Shutdown progress}
+|   |   |   null(javax.swing.JLabel){JLabel: }
+|   |   |   null(jtscomponents.plaf.dE){JButton: }
+|   |   |   null(jtscomponents.plaf.dX){Object.Component.Container.JComponent.JPanel.dX}
+|   |   |   Close(jtscomponents.plaf.ds){[Disabled]JButton: }
+|   |   |   Maximize(jtscomponents.plaf.dt){JButton: }
+|   |   |   Minimize(jtscomponents.plaf.ds){[Disabled]JButton: }
+|   |   |   Keep window on top(trader.common.d1){JToggleButton: }
+
+
+2021-03-13 11:31:21:698 IBC: Detected dialog entitled: Warning; event=Closed
+2021-03-13 11:31:21,959 JTS-ShutdownTask-Shutdown_IA-81 ERROR Attempted to append to non-started appender d
+2021-03-13 11:31:21,960 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2021-03-13 11:31:21,960 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2021-03-13 11:31:22,076 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2021-03-13 11:31:22,095 pool-3-thread-1 ERROR Attempted to append to non-started appender f
+
+Gateway finished at Sat 03/13/2021 11:31:22.77
+
+IBC running GATEWAY 981 has finished at Sat 03/13/2021 11:31:22.79
+

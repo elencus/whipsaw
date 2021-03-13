@@ -1,0 +1,38 @@
+
+================================================================================
+================================================================================
+
+This log file is located at:
+
+    C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\\\Logs\IBC-3.8.5_TWS-981_SATURDAY.txt
+
+
+================================================================================
+
+Starting IBC version 3.8.5 on Sat 03/13/2021 at 11:29:24.52
+
+Operating system:  Microsoft Windows 10 Pro  64-bit          10.0.19042  
+
+Arguments:
+
+TWS version = 981
+Entry point = ibcalpha.ibc.IbcTws
+/TwsPath = ..\\Jts
+/TwsSettingsPath = 
+/IbcPath = C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\
+/Config = C:\Users\Ricardo\Desktop\code\python\whipsaw\IBC\\config.ini
+/Mode = paper
+/JavaPath = 
+/User =
+/PW =
+/FIXUser =
+/FIXPW =
+
+
+=========================== An error has occurred =============================
+
+
+
+Error: Offline TWS/Gateway version 981 is not installed: can't find jars folder 
+       Make sure you install the offline version of TWS/Gateway
+       IBC does not work with the auto-updating TWS/Gateway

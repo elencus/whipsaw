@@ -1,0 +1,9 @@
+# install4j response file for IB Gateway 981 (.2u) 20210310 11:27:58
+cmdLineArgs$StringArray="C\:\\\\Jts\\\\ibgateway\\\\981","ndc1.ibllc.com\:4000"
+exeName=ibgateway
+executeLauncherAction$Boolean=false
+installerType=standalone
+jtsConfigDir=C\:\\Jts\\ibgateway\\981
+sys.adminRights$Boolean=false
+sys.installationDir=C\:\\Jts\\ibgateway\\981
+sys.languageId=en
