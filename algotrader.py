@@ -13,8 +13,8 @@ from collections import OrderedDict
 import json
 from dotenv import load_dotenv
 import os
+import regex
 import asyncio
-import subprocess
 
 #####################################################
 # Algorithmic strategy class for interactive brokers:
@@ -703,11 +703,43 @@ class Algotrader(object):
 
         self.log('Connecting to Interactive Brokers TWS...')
         try:
-            asyncio.set_event_loop(asyncio.ProactorEventLoop())
+            # Load environment variables
+            load_dotenv()
+            userid = os.getenv('USERID')
+            password = os.getenv('PASSWORD')
+
+            # Load directory paths
             dirname = os.path.dirname(os.path.abspath(__file__))
-            batfile = os.path.join(dirname, "IBC", "StartGateway.bat")
-            self.log("Calling IBC batch file from {}".format(batfile))
-            subprocess.call(batfile)
+            twsPath = os.path.join(dirname, "Jts")
+            ibcPath = os.path.join(dirname, "IBC")
+            ibcIni = os.path.join(dirname, "IBC", "config.ini")
+
+            # LINUX: Check Gateway/TWS version from install log
+            # with open(os.getenv('TWS_INSTALL_LOG'), 'r') as fp:
+            #     install_log = fp.read()
+            # twsVersion = regex.search('IB Gateway ([0-9]{3})', install_log).group(1)
+            # END LINUX
+
+            # WINDOWS: Start asyncio
+            asyncio.set_event_loop(asyncio.ProactorEventLoop())
+            # END WINDOWS
+
+            ibc = ib_insync.IBC(
+                # WINDOWS:
+                twsVersion=978,
+                # LINUX: twsVersion=twsVersion,
+                gateway=True,
+                tradingMode='paper',
+                twsPath=twsPath,
+                twsSettingsPath="",
+                ibcPath=ibcPath,
+                ibcIni=ibcIni,
+                userid=userid,
+                password=password
+            )
+            self.log("Initialized IBC")
+            ibc.start()
+            self.log("Started IBC")
 
             ib = ib_insync.IB()
             ib.sleep(30)
@@ -716,7 +748,7 @@ class Algotrader(object):
                 try:
                     if attempts > 5:
                         break
-                    ib.connect(host='127.0.0.1', port=7497, clientId=1)
+                    ib.connect(host='127.0.0.1', port=4002, clientId=1)
                 except:
                     self.log("Failed to connect to TWS/Gateway. Attempting again after 3 seconds.")
                     attempts += 1
@@ -728,20 +760,6 @@ class Algotrader(object):
             self.log('Error in connecting to TWS!! Exiting...')
             self.log(sys.exc_info()[0])
             exit(-1)
-
-        # try:
-        #     ib = IB()
-        #     ib.connect('127.0.0.1', 7497, clientId=0)
-        #     ib.reqAutoOpenOrders(True)
-        #     # Requesting manual pending orders doesn't work with this:
-        #     # ib.connect('127.0.0.1', 7497, clientId=1)
-        #     self.log('Connected')
-        #     self.log()
-        #     return ib
-        # except:
-        #     self.log('Error in connecting to TWS!! Exiting...')
-        #     self.log(sys.exc_info()[0])
-        #     exit(-1)
 
 #####################################################
     def log(self, msg=""):

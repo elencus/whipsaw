@@ -1,22 +1,40 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-slim-buster
+FROM python:3.8
 
-# Keeps Python from generating .pyc files in the container
-ENV PYTHONDONTWRITEBYTECODE=1
+ENV twsPath=/root/Jts \
+    ibcPath=/root/IBC \
+    TWS_INSTALL_LOG=/root/Jts/tws_install.log
 
-# Turns off buffering for easier container logging
-ENV PYTHONUNBUFFERED=1
+# make dirs
+RUN mkdir -p /tmp && mkdir -p ${ibcPath} && mkdir -p ${twsPath}
 
-# Install pip requirements
-COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+# make dirs
+RUN mkdir -p /tmp && mkdir -p ${ibcPath} && mkdir -p ${twsPath}
 
-WORKDIR /app
-COPY . /app
+# download IB TWS
+RUN wget -q -O /tmp/ibgw.sh https://download2.interactivebrokers.com/installers/ibgateway/stable-standalone/ibgateway-stable-standalone-linux-x64.sh
+RUN chmod +x /tmp/ibgw.sh
 
-# Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
-RUN useradd appuser && chown -R appuser /app
-USER appuser
+# download IBC
+RUN wget -q -O /tmp/IBC.zip https://github.com/IbcAlpha/IBC/releases/download/3.8.2/IBCLinux-3.8.2.zip
+RUN unzip /tmp/IBC.zip -d ${ibcPath}
+RUN chmod +x ${ibcPath}/*.sh ${ibcPath}/*/*.sh
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "algotrader.py"]
+# install TWS, write output to file so that we can parse the TWS version number later
+RUN yes n | /tmp/ibgw.sh > ${TWS_INSTALL_LOG}
+
+# remove downloaded files
+RUN rm /tmp/ibgw.sh /tmp/IBC.zip
+
+# copy IBC/Jts configs
+COPY IBC_Windows/config.ini ${ibcIni}
+COPY Jts_Windows/jts.ini ${twsPath}/jts.ini
+
+WORKDIR /root
+COPY algotrader.py /root
+COPY .env /root
+
+RUN pip install ib_insync ibapi pytz python-dotenv numpy pandas pandas_ta asyncio regex
+
+EXPOSE 4002
+
+CMD ["python", "./algotrader.py"]
