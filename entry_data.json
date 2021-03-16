@@ -1,0 +1,239 @@
+{
+    "EUR.USD": {
+        "unitInfo": {
+            "maxUnitSize": 5797400.981165253,
+            "currentUnitSize": -0.19,
+            "exitAllPrice": 1.2241,
+            "isLong": "",
+            "isShort": true,
+            "slSize": 0.00355,
+            "baseExchange": 1.192675,
+            "longEntry": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1449350,
+                "transmit": false,
+                "priceCondition": 1.2349,
+                "orderRef": "EUR.USDentryA",
+                "isMore": true,
+                "slPrice": 1.2313500000000002
+            },
+            "shortEntry": {
+                "action": "SELL",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1449350,
+                "transmit": false,
+                "priceCondition": 1.1836,
+                "orderRef": "EUR.USDentryA",
+                "isMore": false,
+                "slPrice": 1.18715
+            }
+        },
+        "entryInfo": {
+            "entryA": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            },
+            "entryB": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            },
+            "entryC": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            },
+            "entryD": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            }
+        }
+    },
+    "GBP.JPY": {
+        "unitInfo": {
+            "maxUnitSize": 5470916.386742806,
+            "currentUnitSize": 4876738.0,
+            "exitAllPrice": 146.42000000000002,
+            "isLong": true,
+            "isShort": "",
+            "slSize": 0.49,
+            "baseExchange": 0.00915646102781275,
+            "longEntry": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1230162,
+                "transmit": false,
+                "priceCondition": 145.07,
+                "orderRef": "GBP.JPYentryA",
+                "isMore": true,
+                "slPrice": 144.635
+            },
+            "shortEntry": {
+                "action": "SELL",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1230162,
+                "transmit": false,
+                "priceCondition": 136.79,
+                "orderRef": "GBP.JPYentryA",
+                "isMore": false,
+                "slPrice": 137.225
+            }
+        },
+        "entryInfo": {
+            "entryA": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1230162,
+                "transmit": false,
+                "priceCondition": 145.07,
+                "orderRef": "GBP.JPYentryA",
+                "isMore": true,
+                "slPrice": 144.635
+            },
+            "entryB": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1215872,
+                "transmit": false,
+                "priceCondition": 145.515,
+                "orderRef": "GBP.JPYentryB",
+                "isMore": true,
+                "slPrice": 145.07
+            },
+            "entryC": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1215352,
+                "transmit": false,
+                "priceCondition": 145.95999999999998,
+                "orderRef": "GBP.JPYentryC",
+                "isMore": true,
+                "slPrice": 145.515
+            },
+            "entryD": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 1215352,
+                "transmit": false,
+                "priceCondition": 146.405,
+                "orderRef": "GBP.JPYentryD",
+                "isMore": true,
+                "slPrice": 145.96
+            }
+        }
+    },
+    "AUD.CAD": {
+        "unitInfo": {
+            "maxUnitSize": 10060922.752552385,
+            "currentUnitSize": 0,
+            "exitAllPrice": 0,
+            "isLong": "",
+            "isShort": "",
+            "slSize": 0.00315,
+            "baseExchange": 0.7745249999999999,
+            "longEntry": {
+                "action": "BUY",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 2515231,
+                "transmit": false,
+                "priceCondition": 0.9994000000000001,
+                "orderRef": "AUD.CADentryA",
+                "isMore": true,
+                "slPrice": 0.9962500000000001
+            },
+            "shortEntry": {
+                "action": "SELL",
+                "orderType": "MKT",
+                "tif": "GTC",
+                "totalQuantity": 2515231,
+                "transmit": false,
+                "priceCondition": 0.96375,
+                "orderRef": "AUD.CADentryA",
+                "isMore": false,
+                "slPrice": 0.9669
+            }
+        },
+        "entryInfo": {
+            "entryA": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            },
+            "entryB": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            },
+            "entryC": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            },
+            "entryD": {
+                "action": "",
+                "orderType": "",
+                "tif": "",
+                "totalQuantity": 0,
+                "transmit": false,
+                "priceCondition": 0,
+                "orderRef": "",
+                "isMore": false,
+                "slPrice": 0
+            }
+        }
+    }
+}

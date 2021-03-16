@@ -203,11 +203,10 @@ class Algotrader(object):
                          before unit becomes full.")
                 remaining_orders = None
                 current_unit_size = unit_data["unitInfo"]["currentUnitSize"]
-                max_unit_size = unit_data["unitInfo"]["maxUnitSize"]
                 max_entry_size = max_unit_size / 4
-                self.log("current unit: {}".format(current_unit_size))
-                self.log("max unit: {}".format(max_unit_size))
-                self.log("max entry: {}".format(max_entry_size))
+                self.log("Current unit size: {}".format(current_unit_size))
+                self.log("Max unit size: {}".format(max_unit_size))
+                self.log("Max entry size: {}".format(max_entry_size))
                 remaining_orders = round((max_unit_size -
                                          abs(current_unit_size))
                                          / max_entry_size)
@@ -727,7 +726,8 @@ class Algotrader(object):
             ibc = ib_insync.IBC(
                 # WINDOWS:
                 twsVersion=978,
-                # LINUX: twsVersion=twsVersion,
+                # LINUX: 
+                # twsVersion=twsVersion,
                 gateway=True,
                 tradingMode='paper',
                 twsPath=twsPath,
@@ -855,24 +855,29 @@ class Algotrader(object):
             if v.tag == 'AvailableFunds':
                 base = v.currency
 
-        symbol = instrument.localSymbol[-3:] if instrument.localSymbol[-3:] == 'JPY' else instrument.localSymbol[-7:-4]
+        if (instrument.localSymbol[-3:] == 'JPY'):
+            symbol = instrument.localSymbol[-3:]
+        else:
+            symbol = instrument.localSymbol[-7:-4]
 
         if symbol == 'JPY':
             pair = base + symbol
             self.log("Getting current exchange rate for pair {}".format(pair))
-            ticker = self.ib.reqMktData(contract=Forex(pair=pair,
-                                                       symbol=base,
-                                                       currency=symbol))
-            self.ib.sleep(1)
+            ticker = self.ib.reqMktData(contract=ib_insync
+                                        .Forex(pair=pair,
+                                               symbol=base,
+                                               currency=symbol))
+            self.ib.sleep(5)
             self.log("1 {} = {} USD".format(symbol, 1 / ticker.marketPrice()))
             return 1 / ticker.marketPrice()
         else:
             pair = symbol + base
             self.log("Getting current exchange rate for pair {}".format(pair))
-            ticker = self.ib.reqMktData(contract=Forex(pair=pair,
-                                                       symbol=symbol,
-                                                       currency=base))
-            self.ib.sleep(1)
+            ticker = self.ib.reqMktData(contract=ib_insync
+                                        .Forex(pair=pair,
+                                               symbol=symbol,
+                                               currency=base))
+            self.ib.sleep(5)
             self.log("1 {} = {} USD".format(symbol, ticker.marketPrice()))
             return ticker.marketPrice()
 

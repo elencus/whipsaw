@@ -26,8 +26,8 @@ RUN yes n | /tmp/ibgw.sh > ${TWS_INSTALL_LOG}
 RUN rm /tmp/ibgw.sh /tmp/IBC.zip
 
 # copy IBC/Jts configs
-COPY IBC_Windows/config.ini ${ibcIni}
-COPY Jts_Windows/jts.ini ${twsPath}/jts.ini
+COPY configs/config.ini ${ibcIni}
+COPY configs/jts.ini ${twsPath}/jts.ini
 
 WORKDIR /root
 COPY algotrader.py /root
@@ -35,6 +35,9 @@ COPY .env /root
 
 RUN pip install ib_insync ibapi pytz python-dotenv numpy pandas pandas_ta asyncio regex
 
+# EXPOSE 4000
 EXPOSE 4002
+# EXPOSE 7496
+# EXPOSE 7947
 
 CMD ["python", "./algotrader.py"]

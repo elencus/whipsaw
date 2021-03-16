@@ -1,6 +1,8 @@
 #store ad locator
-#Fri Mar 12 20:24:02 IRKT 2021
-ad.last_display.time=1615737599059
-ad.tool.id=Research
-ad.last_update.time=1615551842824
-ad.image=research.png
+#Mon Mar 15 08:34:12 IRKT 2021
+ad.last_show.time=1615768444771
+ad.last_show.tool.id=Research
+ad.last_display.time=1616515199059
+ad.last_update.time=1615768452213
+ad.tool.id=Benchmarker
+ad.image=loadscreen_benchmarker.png
