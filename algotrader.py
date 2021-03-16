@@ -1,24 +1,27 @@
+"""TODO: Docstring"""
 #####################################################
+import asyncio
 import datetime
-import ib_insync
-from ib_insync import *
-from ibapi import *
+import os
+# import ibapi
 import logging
-import pytz
+import json
+from pathlib import Path
 import sys
+import pytz
 import pandas as pd
 import pandas_ta as ta
-from pathlib import Path
 from collections import OrderedDict
-import json
 from dotenv import load_dotenv
-import os
-import regex
-import asyncio
+import ib_insync
+from ib_insync import Forex, IB, IBC, PriceCondition, Order
+# LINUX ONLY IMPORTS:
+# import regex
+
 
 #####################################################
 # Algorithmic strategy class for interactive brokers:
-class Algotrader(object):
+class Algotrader():
     """
     Algorithmic trading strategy for Interactive Brokers
     """
@@ -103,7 +106,7 @@ class Algotrader(object):
                          clearing json data."
                          .format(local_symbol))
                 # Logic for entering new unit.
-                # Clear all json data and cancel all trades for this instrument:
+                # Clear all json data and cancel all trades for instrument:
                 self.clear_orders_from_json(local_symbol)
                 for o in self.get_open_trades(instrument):
                     self.ib.cancelOrder(o.order)
@@ -224,19 +227,19 @@ class Algotrader(object):
                 if remaining_orders >= 1:
                     compound_order_json_tags.append("entryD")
                 self.log("Found {} compound orders can be made \
-                          before unit is full: {}".format(remaining_orders,
-                                                          compound_order_json_tags))
+                          before unit is full: {}"
+                         .format(remaining_orders, compound_order_json_tags))
 
                 self.log("(8) Replacing stoploss \
                     and exit orders for filled entries.")
                 unit_data = self.get_data_from_json()[local_symbol]
                 exit_price_condition = unit_data["unitInfo"]["exitAllPrice"]
                 filled_order_tags = ["entryA"]
-                if not "entryB" in compound_order_json_tags:
+                if "entryB" not in compound_order_json_tags:
                     filled_order_tags.append("entryB")
-                if not "entryC" in compound_order_json_tags:
+                if "entryC" not in compound_order_json_tags:
                     filled_order_tags.append("entryC")
-                if not "entryD" in compound_order_json_tags:
+                if "entryD" not in compound_order_json_tags:
                     filled_order_tags.append("entryD")
                 for tag in filled_order_tags:
                     entry_data = None
@@ -297,8 +300,9 @@ class Algotrader(object):
                     and exit  orders for filled entries.")
 
                 self.log("(9) Creating json data for compound orders.")
-                compound_orders = self.generate_compound_entry_info(instrument,
-                                                                    compound_order_json_tags)
+                compound_orders = \
+                    self.generate_compound_entry_info(instrument,
+                                                      compound_order_json_tags)
                 for tag in compound_orders:
                     self.save_order_data_to_json(local_symbol=local_symbol,
                                                  order_json_tag=tag,
@@ -311,7 +315,8 @@ class Algotrader(object):
                                                  transmit=compound_orders[tag]["transmit"],
                                                  price_condition=compound_orders[tag]["priceCondition"],
                                                  is_more=compound_orders[tag]["isMore"])
-                    self.log("Created json data for compound order {}".format(tag))
+                    self.log("Created json data for compound order {}"
+                             .format(tag))
                 self.log("Finished creating json data for compound orders.")
 
                 self.log("(10) Creating and placing compound orders")
@@ -380,7 +385,8 @@ class Algotrader(object):
                 sl_price = price_condition + sl_size
                 action = "SELL"
                 is_more = False
-            self.log("Set compound order price condition to {} and compound sl to {}".format(price_condition, sl_price))
+            self.log("Set compound order price condition to {} \
+                     and compound sl to {}".format(price_condition, sl_price))
 
             compound_orders[r] = {
                 "action": action,
@@ -392,7 +398,7 @@ class Algotrader(object):
                 "orderRef": instrument.localSymbol + r,
                 "isMore": is_more,
                 "slPrice": sl_price
-            }        
+            }
         return compound_orders
 
 #####################################################
@@ -593,10 +599,12 @@ class Algotrader(object):
 
 #####################################################
     def get_data_from_json(self):
+        """Returns data from json"""
         this_path = Path(__file__)
         entry_data_path = Path(this_path.parent, 'entry_data.json')
         with entry_data_path.open(encoding='utf-8') as entry_data_file:
-            entry_dict = json.load(entry_data_file, object_pairs_hook=OrderedDict)
+            entry_dict = json.load(entry_data_file,
+                                   object_pairs_hook=OrderedDict)
         return entry_dict
 
 #####################################################
@@ -716,17 +724,18 @@ class Algotrader(object):
             # LINUX: Check Gateway/TWS version from install log
             # with open(os.getenv('TWS_INSTALL_LOG'), 'r') as fp:
             #     install_log = fp.read()
-            # twsVersion = regex.search('IB Gateway ([0-9]{3})', install_log).group(1)
+            # twsVersion = regex.search('IB Gateway ([0-9]{3})',
+            #                           install_log).group(1)
             # END LINUX
 
             # WINDOWS: Start asyncio
             asyncio.set_event_loop(asyncio.ProactorEventLoop())
             # END WINDOWS
 
-            ibc = ib_insync.IBC(
+            ibc = IBC(
                 # WINDOWS:
                 twsVersion=978,
-                # LINUX: 
+                # LINUX:
                 # twsVersion=twsVersion,
                 gateway=True,
                 tradingMode='paper',
@@ -741,7 +750,7 @@ class Algotrader(object):
             ibc.start()
             self.log("Started IBC")
 
-            ib = ib_insync.IB()
+            ib = IB()
             ib.sleep(30)
             while not ib.isConnected():
                 attempts = 0
@@ -749,17 +758,20 @@ class Algotrader(object):
                     if attempts > 5:
                         break
                     ib.connect(host='127.0.0.1', port=4002, clientId=1)
-                except:
-                    self.log("Failed to connect to TWS/Gateway. Attempting again after 3 seconds.")
+                except ConnectionError as ex:
+                    self.log("[TWS/Gateway Connection Error]: {}. \
+                             Attempting again after 3 seconds."
+                             .format(ex))
                     attempts += 1
                     ib.sleep(3)
 
             self.log('Connected')
             return ib
-        except:
-            self.log('Error in connecting to TWS!! Exiting...')
+        except ConnectionAbortedError as ex:
+            self.log("[TWS/Gateway Connection Error]: {}. \
+                     Exiting program.".format(ex))
             self.log(sys.exc_info()[0])
-            exit(-1)
+            sys.exit(-1)
 
 #####################################################
     def log(self, msg=""):
@@ -787,7 +799,8 @@ class Algotrader(object):
         self.ib.sleep(1)
         for f in self.ib.reqExecutions():
             if f.contract.localSymbol == instrument.localSymbol:
-                self.log('Found trade with symbol {}: {}'.format(f.contract.localSymbol, f.execution.avgPrice))
+                self.log('Found trade with symbol {}: {}'
+                         .format(f.contract.localSymbol, f.execution.avgPrice))
                 fills.append(f)
         fill_count = len(fills)
         self.log('Currently in {} filled trades for instrument {}.'
@@ -801,10 +814,10 @@ class Algotrader(object):
         self.log("Adding instrument {}".format(ticker))
 
         if instrument_type == 'Forex':
-            instrument = ib_insync.Forex(ticker,
-                                         exchange=exchange,
-                                         symbol=symbol,
-                                         currency=currency)
+            instrument = Forex(ticker,
+                               exchange=exchange,
+                               symbol=symbol,
+                               currency=currency)
         else:
             raise ValueError(
                        "Invalid instrument type: {}".format(instrument_type))
@@ -817,12 +830,10 @@ class Algotrader(object):
         """Returns available funds in USD"""
         account_values = self.ib.accountValues()
         available_funds = 0
-        i = 0
         for value in account_values:
-            if account_values[i].tag == 'AvailableFunds':
-                available_funds = float(account_values[i].value)
+            if value.tag == 'AvailableFunds':
+                available_funds = float(value.value)
                 break
-            i += 1
         return available_funds
 
 #####################################################
@@ -830,13 +841,11 @@ class Algotrader(object):
         """Returns current position for currency pair in units"""
         account_values = self.ib.accountValues()
         cash_balance = 0
-        i = 0
         for value in account_values:
-            if account_values[i].tag == 'CashBalance' and \
-               account_values[i].currency == instrument.localSymbol[0:3]:
-                cash_balance = float(account_values[i].value)
+            if value.tag == 'CashBalance' and \
+               value.currency == instrument.localSymbol[0:3]:
+                cash_balance = float(value.value)
                 break
-            i += 1
         return cash_balance
 
 #####################################################
@@ -855,7 +864,7 @@ class Algotrader(object):
             if v.tag == 'AvailableFunds':
                 base = v.currency
 
-        if (instrument.localSymbol[-3:] == 'JPY'):
+        if instrument.localSymbol[-3:] == 'JPY':
             symbol = instrument.localSymbol[-3:]
         else:
             symbol = instrument.localSymbol[-7:-4]
@@ -870,16 +879,15 @@ class Algotrader(object):
             self.ib.sleep(5)
             self.log("1 {} = {} USD".format(symbol, 1 / ticker.marketPrice()))
             return 1 / ticker.marketPrice()
-        else:
-            pair = symbol + base
-            self.log("Getting current exchange rate for pair {}".format(pair))
-            ticker = self.ib.reqMktData(contract=ib_insync
-                                        .Forex(pair=pair,
-                                               symbol=symbol,
-                                               currency=base))
-            self.ib.sleep(5)
-            self.log("1 {} = {} USD".format(symbol, ticker.marketPrice()))
-            return ticker.marketPrice()
+        pair = symbol + base
+        self.log("Getting current exchange rate for pair {}".format(pair))
+        ticker = self.ib.reqMktData(contract=ib_insync
+                                    .Forex(pair=pair,
+                                           symbol=symbol,
+                                           currency=base))
+        self.ib.sleep(5)
+        self.log("1 {} = {} USD".format(symbol, ticker.marketPrice()))
+        return ticker.marketPrice()
 
 #####################################################
     def set_position_size(self, instrument):
@@ -939,7 +947,7 @@ class Algotrader(object):
                      tif="GTC",
                      total_quantity=0,
                      transmit=False,
-                     *args, **kwargs):
+                     **kwargs):
         """Places order with IBKR given relevant info.
         kwargs:
         bool is_more - True if price condition is >, False if <
