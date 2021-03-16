@@ -1,8 +1,0 @@
-# install4j response file for Trader Workstation 978 (.2o) 20210302 11:53:06
-cmdLineArgs$StringArray="C\:\\\\Jts","ndc1.ibllc.com\:4000"
-exeName=tws
-executeLauncherAction$Boolean=false
-installerType=standalone
-sys.adminRights$Boolean=false
-sys.installationDir=C\:\\Jts\\978
-sys.languageId=en
