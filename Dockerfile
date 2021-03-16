@@ -26,8 +26,8 @@ RUN yes n | /tmp/ibgw.sh > ${TWS_INSTALL_LOG}
 RUN rm /tmp/ibgw.sh /tmp/IBC.zip
 
 # copy IBC/Jts configs
-COPY configs/config.ini ${ibcIni}
-COPY configs/jts.ini ${twsPath}/jts.ini
+COPY /root/config.ini ${ibcIni}
+COPY /root/jts.ini ${twsPath}/jts.ini
 
 WORKDIR /root
 COPY algotrader.py /root
