@@ -1,34 +1,34 @@
 {
     "EUR.USD": {
         "unitInfo": {
-            "maxUnitSize": 5797400.981165253,
+            "maxUnitSize": 5793141.9786872035,
             "currentUnitSize": -0.19,
             "exitAllPrice": 1.2241,
             "isLong": "",
             "isShort": true,
-            "slSize": 0.00355,
-            "baseExchange": 1.192675,
+            "slSize": 0.0036000000000000003,
+            "baseExchange": 1.196725,
             "longEntry": {
                 "action": "BUY",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 1449350,
+                "totalQuantity": 1448285,
                 "transmit": false,
                 "priceCondition": 1.2349,
                 "orderRef": "EUR.USDentryA",
                 "isMore": true,
-                "slPrice": 1.2313500000000002
+                "slPrice": 1.2313
             },
             "shortEntry": {
                 "action": "SELL",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 1449350,
+                "totalQuantity": 1448285,
                 "transmit": false,
                 "priceCondition": 1.1836,
                 "orderRef": "EUR.USDentryA",
                 "isMore": false,
-                "slPrice": 1.18715
+                "slPrice": 1.1872
             }
         },
         "entryInfo": {
@@ -80,13 +80,13 @@
     },
     "GBP.JPY": {
         "unitInfo": {
-            "maxUnitSize": 5470916.386742806,
-            "currentUnitSize": 4876738.0,
-            "exitAllPrice": 146.42000000000002,
+            "maxUnitSize": 5554826.447730062,
+            "currentUnitSize": 6274354.0,
+            "exitAllPrice": 147.29,
             "isLong": true,
             "isShort": "",
             "slSize": 0.49,
-            "baseExchange": 0.00915646102781275,
+            "baseExchange": 0.00916947481832978,
             "longEntry": {
                 "action": "BUY",
                 "orderType": "MKT",
@@ -159,34 +159,34 @@
     },
     "AUD.CAD": {
         "unitInfo": {
-            "maxUnitSize": 10060922.752552385,
+            "maxUnitSize": 9962506.867315983,
             "currentUnitSize": 0,
             "exitAllPrice": 0,
             "isLong": "",
             "isShort": "",
-            "slSize": 0.00315,
-            "baseExchange": 0.7745249999999999,
+            "slSize": 0.0032,
+            "baseExchange": 0.782875,
             "longEntry": {
                 "action": "BUY",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 2515231,
+                "totalQuantity": 2490627,
                 "transmit": false,
                 "priceCondition": 0.9994000000000001,
                 "orderRef": "AUD.CADentryA",
                 "isMore": true,
-                "slPrice": 0.9962500000000001
+                "slPrice": 0.9962000000000001
             },
             "shortEntry": {
                 "action": "SELL",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 2515231,
+                "totalQuantity": 2490627,
                 "transmit": false,
-                "priceCondition": 0.96375,
+                "priceCondition": 0.9610000000000001,
                 "orderRef": "AUD.CADentryA",
                 "isMore": false,
-                "slPrice": 0.9669
+                "slPrice": 0.9642000000000001
             }
         },
         "entryInfo": {
