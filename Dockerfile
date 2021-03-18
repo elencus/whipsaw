@@ -1,5 +1,11 @@
 FROM python:3.8
 
+# install dependencies
+RUN  apt-get update \
+  && apt-get upgrade -y \
+  && apt-get install -y wget unzip xvfb libxtst6 libxrender1 python3.7-dev build-essential net-tools x11-utils socat
+
+
 ENV twsPath=/root/Jts \
     ibcPath=/root/IBC \
     TWS_INSTALL_LOG=/root/Jts/tws_install.log
@@ -26,18 +32,28 @@ RUN yes n | /tmp/ibgw.sh > ${TWS_INSTALL_LOG}
 RUN rm /tmp/ibgw.sh /tmp/IBC.zip
 
 # copy IBC/Jts configs
-COPY /root/config.ini ${ibcIni}
-COPY /root/jts.ini ${twsPath}/jts.ini
+COPY /config.ini ${ibcIni}
+COPY /jts.ini ${twsPath}/jts.ini
 
+# copy cmd script
 WORKDIR /root
+COPY cmd.sh /root/cmd.sh
+RUN chmod +x /root/cmd.sh
+
 COPY algotrader.py /root
+RUN chmod +x /root/algotrader.py
+COPY bootstrap.py /root
+RUN chmod +x /root/bootstrap.py
 COPY .env /root
 
 RUN pip install ib_insync ibapi pytz python-dotenv numpy pandas pandas_ta asyncio regex
 
-# EXPOSE 4000
-EXPOSE 4002
-# EXPOSE 7496
-# EXPOSE 7947
+# set display environment variable (must be set after TWS installation)
+ENV DISPLAY=:0
+ENV GCP_SECRET=False
 
-CMD ["python", "./algotrader.py"]
+ENV IBGW_PORT 4002
+
+EXPOSE $IBGW_PORT
+
+ENTRYPOINT [ "sh", "/root/cmd.sh" ] 

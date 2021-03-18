@@ -1,18 +1,18 @@
 {
     "EUR.USD": {
         "unitInfo": {
-            "maxUnitSize": 5793141.9786872035,
+            "maxUnitSize": 5800062.845793861,
             "currentUnitSize": -0.19,
             "exitAllPrice": 1.2241,
             "isLong": "",
             "isShort": true,
             "slSize": 0.0036000000000000003,
-            "baseExchange": 1.196725,
+            "baseExchange": 1.197225,
             "longEntry": {
                 "action": "BUY",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 1448285,
+                "totalQuantity": 1450016,
                 "transmit": false,
                 "priceCondition": 1.2349,
                 "orderRef": "EUR.USDentryA",
@@ -23,7 +23,7 @@
                 "action": "SELL",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 1448285,
+                "totalQuantity": 1450016,
                 "transmit": false,
                 "priceCondition": 1.1836,
                 "orderRef": "EUR.USDentryA",
@@ -80,13 +80,13 @@
     },
     "GBP.JPY": {
         "unitInfo": {
-            "maxUnitSize": 5554826.447730062,
+            "maxUnitSize": 5555113.335503214,
             "currentUnitSize": 6274354.0,
             "exitAllPrice": 147.29,
             "isLong": true,
             "isShort": "",
             "slSize": 0.49,
-            "baseExchange": 0.00916947481832978,
+            "baseExchange": 0.009183790609574102,
             "longEntry": {
                 "action": "BUY",
                 "orderType": "MKT",
@@ -159,18 +159,18 @@
     },
     "AUD.CAD": {
         "unitInfo": {
-            "maxUnitSize": 9962506.867315983,
+            "maxUnitSize": 9972843.673602909,
             "currentUnitSize": 0,
             "exitAllPrice": 0,
             "isLong": "",
             "isShort": "",
             "slSize": 0.0032,
-            "baseExchange": 0.782875,
+            "baseExchange": 0.783325,
             "longEntry": {
                 "action": "BUY",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 2490627,
+                "totalQuantity": 2471663,
                 "transmit": false,
                 "priceCondition": 0.9994000000000001,
                 "orderRef": "AUD.CADentryA",
@@ -181,7 +181,7 @@
                 "action": "SELL",
                 "orderType": "MKT",
                 "tif": "GTC",
-                "totalQuantity": 2490627,
+                "totalQuantity": 2471663,
                 "transmit": false,
                 "priceCondition": 0.9610000000000001,
                 "orderRef": "AUD.CADentryA",

@@ -711,44 +711,44 @@ class Algotrader():
         self.log('Connecting to Interactive Brokers TWS...')
         try:
             # Load environment variables
-            load_dotenv()
-            userid = os.getenv('USERID')
-            password = os.getenv('PASSWORD')
+            # load_dotenv()
+            # userid = os.getenv('USERID')
+            # password = os.getenv('PASSWORD')
 
-            # Load directory paths
-            dirname = os.path.dirname(os.path.abspath(__file__))
-            twsPath = os.path.join(dirname, "Jts")
-            ibcPath = os.path.join(dirname, "IBC")
-            ibcIni = os.path.join(dirname, "IBC", "config.ini")
+            # # Load directory paths
+            # dirname = os.path.dirname(os.path.abspath(__file__))
+            # twsPath = os.path.join(dirname, "Jts")
+            # ibcPath = os.path.join(dirname, "IBC")
+            # ibcIni = os.path.join(dirname, "IBC", "config.ini")
 
-            # LINUX: Check Gateway/TWS version from install log
-            # with open(os.getenv('TWS_INSTALL_LOG'), 'r') as fp:
-            #     install_log = fp.read()
-            # twsVersion = regex.search('IB Gateway ([0-9]{3})',
-            #                           install_log).group(1)
-            # END LINUX
+            # # LINUX: Check Gateway/TWS version from install log
+            # # with open(os.getenv('TWS_INSTALL_LOG'), 'r') as fp:
+            # #     install_log = fp.read()
+            # # twsVersion = regex.search('IB Gateway ([0-9]{3})',
+            # #                           install_log).group(1)
+            # # END LINUX
 
-            # WINDOWS: Start asyncio
-            asyncio.set_event_loop(asyncio.ProactorEventLoop())
-            # END WINDOWS
+            # # WINDOWS: Start asyncio
+            # asyncio.set_event_loop(asyncio.ProactorEventLoop())
+            # # END WINDOWS
 
-            ibc = IBC(
-                # WINDOWS:
-                twsVersion=978,
-                # LINUX:
-                # twsVersion=twsVersion,
-                gateway=True,
-                tradingMode='paper',
-                twsPath=twsPath,
-                twsSettingsPath="",
-                ibcPath=ibcPath,
-                ibcIni=ibcIni,
-                userid=userid,
-                password=password
-            )
-            self.log("Initialized IBC")
-            ibc.start()
-            self.log("Started IBC")
+            # ibc = IBC(
+            #     # WINDOWS:
+            #     twsVersion=978,
+            #     # LINUX:
+            #     # twsVersion=twsVersion,
+            #     gateway=True,
+            #     tradingMode='paper',
+            #     twsPath=twsPath,
+            #     twsSettingsPath="",
+            #     ibcPath=ibcPath,
+            #     ibcIni=ibcIni,
+            #     userid=userid,
+            #     password=password
+            # )
+            # self.log("Initialized IBC")
+            # ibc.start()
+            # self.log("Started IBC")
 
             ib = IB()
             ib.sleep(30)
