@@ -3,7 +3,6 @@
 import asyncio
 import datetime
 import os
-# import ibapi
 import logging
 import json
 from pathlib import Path
@@ -16,7 +15,7 @@ from dotenv import load_dotenv
 import ib_insync
 from ib_insync import Forex, IB, IBC, PriceCondition, Order
 # LINUX ONLY IMPORTS:
-# import regex
+import regex
 
 
 #####################################################
@@ -711,53 +710,59 @@ class Algotrader():
         self.log('Connecting to Interactive Brokers TWS...')
         try:
             # Load environment variables
-            # load_dotenv()
-            # userid = os.getenv('USERID')
-            # password = os.getenv('PASSWORD')
+            load_dotenv()
+            userid = os.getenv('USERID')
+            password = os.getenv('PASSWORD')
 
-            # # Load directory paths
-            # dirname = os.path.dirname(os.path.abspath(__file__))
-            # twsPath = os.path.join(dirname, "Jts")
-            # ibcPath = os.path.join(dirname, "IBC")
-            # ibcIni = os.path.join(dirname, "IBC", "config.ini")
+            # Load directory paths
+            dirname = os.path.dirname(os.path.abspath(__file__))
+            twsPath = os.path.join(dirname, "Jts")
+            ibcPath = os.path.join(dirname, "IBC")
+            ibcIni = os.path.join(dirname, "IBC", "config.ini")
 
-            # # LINUX: Check Gateway/TWS version from install log
-            # # with open(os.getenv('TWS_INSTALL_LOG'), 'r') as fp:
-            # #     install_log = fp.read()
-            # # twsVersion = regex.search('IB Gateway ([0-9]{3})',
-            # #                           install_log).group(1)
-            # # END LINUX
+            # LINUX: Check Gateway/TWS version from install log
+            # with open(os.getenv('TWS_INSTALL_LOG'), 'r') as fp:
+            #     install_log = fp.read()
+            # twsVersion = regex.search('IB Gateway ([0-9]{3})',
+            #                           install_log).group(1)
+            # END LINUX
 
-            # # WINDOWS: Start asyncio
-            # asyncio.set_event_loop(asyncio.ProactorEventLoop())
-            # # END WINDOWS
+            # WINDOWS: Start asyncio
+            asyncio.set_event_loop(asyncio.ProactorEventLoop())
+            # END WINDOWS
 
-            # ibc = IBC(
-            #     # WINDOWS:
-            #     twsVersion=978,
-            #     # LINUX:
-            #     # twsVersion=twsVersion,
-            #     gateway=True,
-            #     tradingMode='paper',
-            #     twsPath=twsPath,
-            #     twsSettingsPath="",
-            #     ibcPath=ibcPath,
-            #     ibcIni=ibcIni,
-            #     userid=userid,
-            #     password=password
-            # )
-            # self.log("Initialized IBC")
-            # ibc.start()
-            # self.log("Started IBC")
+            ibc = IBC(
+                # WINDOWS:
+                twsVersion=978,
+                # LINUX:
+                # twsVersion=twsVersion,
+                gateway=True,
+                tradingMode='paper',
+                twsPath=twsPath,
+                twsSettingsPath="",
+                ibcPath=ibcPath,
+                ibcIni=ibcIni,
+                userid=userid,
+                password=password,
+            )
+
+            self.log("Initialized IBC")
+            ibc.start()
+            self.log("Started IBC")
 
             ib = IB()
+
             ib.sleep(30)
             while not ib.isConnected():
                 attempts = 0
                 try:
                     if attempts > 5:
                         break
-                    ib.connect(host='127.0.0.1', port=4002, clientId=1)
+                    ib.connect(host='127.0.0.1',
+                               port=4002,
+                               clientId=1,
+                               account='DU2821664',
+                               timeout=30)
                 except ConnectionError as ex:
                     self.log("[TWS/Gateway Connection Error]: {}. \
                              Attempting again after 3 seconds."
@@ -1023,6 +1028,9 @@ class Algotrader():
 # MAIN PROGRAMME:
 
 if __name__ == '__main__':
+    # Set up ib_insync to log to console
+    ib_insync.util.logToConsole(logging.INFO)
+
     # Create algo object
     algo = Algotrader()
 

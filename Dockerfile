@@ -30,6 +30,7 @@ RUN yes n | /tmp/ibgw.sh > ${TWS_INSTALL_LOG}
 
 # remove downloaded files
 RUN rm /tmp/ibgw.sh /tmp/IBC.zip
+RUN rm /tmp/IBC.zip
 
 # copy IBC/Jts configs
 COPY /config.ini ${ibcIni}
@@ -42,11 +43,9 @@ RUN chmod +x /root/cmd.sh
 
 COPY algotrader.py /root
 RUN chmod +x /root/algotrader.py
-COPY bootstrap.py /root
-RUN chmod +x /root/bootstrap.py
 COPY .env /root
 
-RUN pip install ib_insync ibapi pytz python-dotenv numpy pandas pandas_ta asyncio regex
+RUN pip install ib_insync pytz python-dotenv numpy pandas pandas_ta regex
 
 # set display environment variable (must be set after TWS installation)
 ENV DISPLAY=:0

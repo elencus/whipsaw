@@ -18,7 +18,7 @@ echo "Setup port forwarding..."
 socat TCP-LISTEN:$IBGW_PORT,fork TCP:localhost:4001,forever &
 echo "*****************************"
 
-python /root/bootstrap.py
+python /root/algotrader.py
 
 echo "IB gateway is ready."
 

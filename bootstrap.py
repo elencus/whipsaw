@@ -45,12 +45,12 @@ if __name__ == "__main__":
 
     def onDisconnected():
         logging.info('IB gateway disconnected')
-    ib.connectedEvent += onConnected
-    ib.disconnectedEvent += onDisconnected
     watchdog = Watchdog(ibc, ib, port=4002,
                         connectTimeout=30,
                         appStartupTime=120,
                         appTimeout=30)
+    watchdog.startedEvent += onConnected
+    watchdog.stoppedEvent += onDisconnected
     watchdog.start()
     logging.info("Watchdog Started.")
     ib.run()
